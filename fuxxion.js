@@ -4,9 +4,13 @@ const menuBurguer =  document.querySelector('.menu');
 const mobileMenu =  document.querySelector('.mobile-menu');
 const carrito = document.querySelector('.navbar-shopping-cart');
 const tagDetalles = document.querySelector('.product-detail');
-
 const cardContainer = document.querySelector('.cards-container');
 
+const tagProducto= document.querySelector('.product-Armonia');
+const closeTagproducto = document.querySelector('.product-detail-close');
+
+
+//Funciones Activadoras de despliegue de menus y tags
 
 activador.addEventListener('click', ()=>{
     Menucito.classList.toggle('inactive');
@@ -42,6 +46,9 @@ carrito.addEventListener('click', ()=>{
     }  
 });
 
+
+
+//Lista de productos 
 const productList = [];
 
 productList.push({
@@ -57,6 +64,7 @@ productList.push({
     image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 
 });
+
 productList.push({
     name: 'IPhone',
     price: 1000,
@@ -89,6 +97,15 @@ productList.push({
     const ProductImg = document.createElement('img');
     ProductImg.setAttribute('src', product.image);
 
+// Activacion tagProducto
+    ProductImg.addEventListener('click', ()=>{
+        tagProducto.classList.remove('inactive');
+    });
+
+    closeTagproducto.addEventListener('click', ()=>{
+        tagProducto.classList.add('inactive');
+    });
+
     const productInfo = document.createElement('div');
     productInfo.classList.add('product-info');
 
@@ -120,3 +137,16 @@ productList.push({
     cardContainer.appendChild(productCard);
  }
 
+
+  // funcion para ACTIVACION del  aside > productArmonia , al hacer Click en div > Product Card
+
+
+
+  
+   
+
+
+       
+    
+
+ 
