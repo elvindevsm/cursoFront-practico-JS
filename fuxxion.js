@@ -20,6 +20,9 @@ activador.addEventListener('click', ()=>{
      if(!tagDetalles.classList.contains('inactive')){
         tagDetalles.classList.toggle('inactive');
      }
+     else if (!tagProducto.classList.contains('inactive')){
+        tagProducto.classList.toggle('inactive');
+    } 
 });
 
 menuBurguer.addEventListener('click', ()=>{
@@ -43,7 +46,10 @@ carrito.addEventListener('click', ()=>{
        // Menucito esta abierto (NO esta inactive) ? si; Cierra Menucito, no;;
     else if (!Menucito.classList.contains('inactive')){
         Menucito.classList.toggle('inactive');
-    }  
+    }
+    else if (!tagProducto.classList.contains('inactive')){
+        tagProducto.classList.toggle('inactive');
+    } 
 });
 
 
@@ -100,6 +106,13 @@ productList.push({
 // Activacion tagProducto
     ProductImg.addEventListener('click', ()=>{
         tagProducto.classList.remove('inactive');
+
+        if(!tagDetalles.classList.contains('inactive')){
+            tagDetalles.classList.toggle('inactive');
+        }
+        else if(!Menucito.classList.contains('inactive')){
+            Menucito.classList.toggle('inactive');
+        }   
     });
 
     closeTagproducto.addEventListener('click', ()=>{

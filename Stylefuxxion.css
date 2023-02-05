@@ -130,6 +130,8 @@
     top: 60px;
     left: 0;
     width: 100%;
+    background: var(--white);
+    line-height: 3px;
   }
   .mobile-menu a {
     text-decoration: none;
@@ -165,7 +167,7 @@
     box-sizing: border-box;
     position: absolute;
     right: 14px;
-    top: 40px;
+    top: 62px;
     background: var(--white);
   }
   .title-container {
